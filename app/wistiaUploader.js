@@ -2,7 +2,7 @@ angular.module('wistiaUpload')
     .directive('uploader', ['$timeout', '$sce', '$http', function ($timeout, $sce, $http) {
         return {
             restrict: 'E',
-            templateUrl: 'app/templates/directive.wistiaUploader.html',
+            templateUrl: 'Wistia-Uploader-Directive/app/templates/directive.wistiaUploader.html',
             replace: true,
             scope: {
                 wistiaApiPass: "@wistiaPass"
