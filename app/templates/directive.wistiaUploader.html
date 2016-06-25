@@ -1,0 +1,21 @@
+<div class="uploader">
+    <div class="form-group">
+        <input id="fileUpload" type="file" name="file" style="display:none;" data-url="https://upload.wistia.com"/>
+        <span class="upload-btn btn btn-info btn-lg">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Upload Video</span>
+        </span>
+    </div>
+    <div class="alert alert-warning alert-dismissible" role="alert" ng-show="error">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Error!</strong> {{status}}
+    </div>
+    <div class="progress" ng-show="progress!=0">
+        <div ng-class="isUploading ? 'progress-bar progress-bar-success' : 'progress-bar progress-bar-warning progress-bar-striped active'"
+             style="width:{{progress + '%'}}"
+             role="progressbar">{{progress}}% {{status}}</div>
+    </div>
+    <iframe ng-src="{{url}}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+            name="wistia_embed" width="640" height="360" ng-show="url != ''"></iframe>
+</div>
+
